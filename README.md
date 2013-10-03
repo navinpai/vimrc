@@ -8,7 +8,7 @@ I CAN HAZ .VIMRC
 > Actual representation of how you feel unleashing the power of Vim
 
 
-My Plugins
+PLUGINS
 ----
 1. [Vundle] - For managing plugins
 2. [Snipmate.vim] - Snippets for different languages
@@ -16,7 +16,7 @@ My Plugins
 4. [NERDTree] - Directory browsing
 5. ... a couple custom key bindings
 
-Color Scheme
+COLORSCHEME
 ----
 [ir_black]
 
