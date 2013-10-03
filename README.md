@@ -10,11 +10,15 @@ I CAN HAZ .VIMRC
 
 My Plugins
 ----
-1. [Vundle]
-2. [Snipmate.vim]
-3. [SuperTab]
-4. [NERDTree]
+1. [Vundle] - For managing plugins
+2. [Snipmate.vim] - Snippets for different languages
+3. [SuperTab] - Unleash the power of TAB
+4. [NERDTree] - Directory browsing
 5. ... a couple custom key bindings
+
+Color Scheme
+----
+[ir_black]
 
 
 USAGE
@@ -41,3 +45,4 @@ LICENSE
   [supertab]: https://github.com/ervandew/supertab
   [nerdtree]: https://github.com/scrooloose/nerdtree/
   [vundle]: https://github.com/gmarik/vundle
+  [ir_black]: https://github.com/twerth/ir_black
