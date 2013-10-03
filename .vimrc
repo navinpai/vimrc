@@ -1,7 +1,9 @@
 set nocompatible
 
-" I can has Pathogen
-"execute pathogen#infect()
+" Disabled Pathogen for Vundle
+" Infect with Pathogen
+" execute pathogen#infect()
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
