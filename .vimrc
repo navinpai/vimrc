@@ -3,7 +3,6 @@ set nocompatible
 " Disabled Pathogen for Vundle
 " Infect with Pathogen
 " execute pathogen#infect()
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -13,9 +12,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/supertab'
 Bundle 'msanders/snipmate.vim'
 
-
-filetype on
-
+" set 256 colors
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
@@ -26,12 +23,22 @@ filetype plugin indent on
 set pastetoggle=<F10>
 inoremap <C-v> <F10><C-r>+<F10>
 
-vnoremap <C-c> "+y
+" copy and paste
+set clipboard=unnamedplus
 
+"Ctrl-C Ctrl-X Ctrl-V bindings
+map <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pa
+
+" Syntax highlighting on
 :syn on
+
+" Set colorscheme
 colorscheme ir_black
 
-" show line number
+" Show line number
 set number
 
 " Be smart when using tabs ;)
@@ -60,9 +67,10 @@ set backspace=indent,eol,start
 set lbr
 set tw=500
 
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap lines
+"Auto indent, Smart Indent and wrap lines
+set ai 
+set si
+set wrap 
 
 " For regular expressions turn magic on
 set magic
@@ -91,6 +99,5 @@ set autoread
 " set Nerdtree size
 let g:NERDTreeWinSize = 20
 
-"SuperTab
+" SuperTab
 let g:SuperTabDefaultCompletionType = "context"
-
