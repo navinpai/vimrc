@@ -47,4 +47,4 @@ LICENSE
   [nerdtree]: https://github.com/scrooloose/nerdtree/
   [vundle]: https://github.com/gmarik/vundle
   [ir_black]: https://github.com/twerth/ir_black
-  [Jellybeans]:[https://github.com/nanotech/jellybeans.vim]
+  [jellybeans]:[https://github.com/nanotech/jellybeans.vim]
