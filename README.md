@@ -19,6 +19,7 @@ PLUGINS
 COLORSCHEME
 ----
 [ir_black]
+
 Alternate: [jellybeans]
 
 USAGE
