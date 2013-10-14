@@ -10,11 +10,15 @@ Bundle 'gmarik/vundle'
 
 Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/supertab'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
 
-Bundle "honza/vim-snippets"
+"Dependencies for snipmate
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+
+Bundle 'garbas/vim-snipmate'
+"Default snippets
+Bundle 'honza/vim-snippets'
+
 Bundle 'jaytang0923/taglist.vim'
 
 " set 256 colors
