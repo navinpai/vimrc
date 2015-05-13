@@ -21,6 +21,7 @@ Bundle 'honza/vim-snippets'
 
 Bundle 'jaytang0923/taglist.vim'
 
+Bundle 'Raimondi/delimitMate'
 " set 256 colors
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
@@ -105,6 +106,11 @@ set history=700
 " Set to auto read when a file is changed from the outside
 set autoread
 
+" Set tabstop and expand tabs to spaces
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 " set Nerdtree size
 let g:NERDTreeWinSize = 20
 let NERDTreeShowHidden=1
@@ -120,3 +126,11 @@ let Tlist_WinWidth=20
 let Tlist_Exit_OnlyWindow=1
 let Tlist_File_Fold_Auto_Close = 1
 nmap <LocalLeader>tt :Tlist<cr>
+
+function LessToCss()
+  let current_file = shellescape(expand('%:p'))
+  let filename = shellescape(expand('%:r'))
+  let command = "silent !lessc " . current_file . " " . filename . ".css"
+  execute command
+endfunction
+autocmd BufWritePost,FileWritePost *.less call LessToCss()
