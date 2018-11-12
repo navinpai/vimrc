@@ -3,38 +3,43 @@ set nocompatible
 " Disabled Pathogen for Vundle
 " Infect with Pathogen
 " execute pathogen#infect()
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'scrooloose/nerdtree'
-Bundle 'ervandew/supertab'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ervandew/supertab'
 
 "Dependencies for snipmate
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
 
-Bundle 'garbas/vim-snipmate'
+Plugin 'garbas/vim-snipmate'
 "Default snippets
-Bundle 'honza/vim-snippets'
+Plugin 'honza/vim-snippets'
 
-Bundle 'jaytang0923/taglist.vim'
+Plugin 'jaytang0923/taglist.vim'
 
-Bundle 'Raimondi/delimitMate'
+Plugin 'Raimondi/delimitMate'
+
+Plugin 'ConradIrwin/vim-bracketed-paste'
+
+call vundle#end()
+
+" filetype plugins on
+filetype plugin indent on
+
 " set 256 colors
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
 
-" filetype plugins on
-filetype plugin indent on
-
 set pastetoggle=<F10>
 inoremap <C-v> <F10><C-r>+<F10>
 
 " copy and paste
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 "Ctrl-C Ctrl-X Ctrl-V bindings
 map <C-c> "+yi
@@ -66,7 +71,7 @@ set tabstop=4
  set backupdir=~/.vim/backups
  set directory=~/.vim/swaps
  if exists("&undodir")
-	 set undodir=~/.vim/undo
+     set undodir=~/.vim/undo
  endif
 
 " Backspace works as it's meant to
@@ -112,7 +117,7 @@ set shiftwidth=4
 set expandtab
 
 " set Nerdtree size
-let g:NERDTreeWinSize = 20
+let g:NERDTreeWinSize=30
 let NERDTreeShowHidden=1
 nmap <LocalLeader>nn :NERDTreeToggle<cr>
 
@@ -127,6 +132,7 @@ let Tlist_Exit_OnlyWindow=1
 let Tlist_File_Fold_Auto_Close = 1
 nmap <LocalLeader>tt :Tlist<cr>
 
+" Convert LESS to CSS on save - Thanks Jeff
 function LessToCss()
   let current_file = shellescape(expand('%:p'))
   let filename = shellescape(expand('%:r'))
