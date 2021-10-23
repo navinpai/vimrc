@@ -140,3 +140,5 @@ function LessToCss()
   execute command
 endfunction
 autocmd BufWritePost,FileWritePost *.less call LessToCss()
+
+let g:snipMate = { 'snippet_version' : 1 }
