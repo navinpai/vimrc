@@ -111,6 +111,9 @@ set history=700
 " Set to auto read when a file is changed from the outside
 set autoread
 
+" Always show the status line
+set laststatus=2
+
 " Set tabstop and expand tabs to spaces
 set tabstop=4
 set shiftwidth=4
